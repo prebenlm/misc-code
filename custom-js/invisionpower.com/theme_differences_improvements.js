@@ -23,8 +23,8 @@ if(window.location.href == "https://invisionpower.com/index.php?app=core&module=
 					break;
 				case 3:
 					templateLocation += '/' + itemName + '.phtml';
-					$(outerDiv).find('.ipsGrid.ipsAreaBackground_light').append('<div class="clickToHide ipsGrid_span12"><span class="ipsType_large">' + templateLocation + ' (Click here to collapse/expand the diff)</span></div>');
-					$(outerDiv).find('.clickToHide').on( 'click', function() {
+					$(outerDiv).find('.ipsGrid.ipsAreaBackground_light').append('<div class="clickToHide ipsGrid_span12"><span class="ipsType_large">' + templateLocation + ' <button class="ipsButton ipsButton_verySmall">Expand/Collapse</button></span></div>');
+					$(outerDiv).find('.clickToHide button').on( 'click', function() {
 						if( $(outerDiv).find('table.diff').length ) {
 							$(outerDiv).find('table.diff').toggle();
 						}
